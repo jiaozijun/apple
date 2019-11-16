@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: apple
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.105.105.104/jiao?useUnicode=true&allowMultiQueries=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&tinyInt1isBit=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      connection-test-query: SELECT 1
+      minimum-idle: 5
+      idle-timeout: 30000
+      pool-name: PrivilegeWebHikariCP
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: Jzj6585704
+
+# mybatis-plus
+mybatis-plus:
+  type-aliases-package: com.limikeji.xueguan.privilege.mapper
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+
+# Logging
+logging:
+  config: classpath:logback-apple.xml
+logback:
+  path:  /root/logs/apple
+#  path: /Users/nico/applicaiton/logs/apple

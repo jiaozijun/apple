@@ -28,7 +28,7 @@
         <swagger-ui>1.9.4</swagger-ui>
         <fastjson.version>1.2.47</fastjson.version>
         <mybatisplus.version>3.1.1</mybatisplus.version>
-        <mysql.version>5.1.48</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
      </properties>
 
 
